@@ -1,0 +1,20 @@
+:root {
+    --landing-color: #E5E5E5;
+    --font-landing:'Poppins', sans-serif;
+    --font-family: 'Krona One', sans-serif;
+    --font-dashboard: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+
