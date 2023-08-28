@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vibify</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,22 +13,56 @@
     />
   </head>
   <body>
+
+    <!-- //nav part -->
     <header>
       <nav>
+        <div class="logo">
+          <img src="./images/logo.png" alt="" srcset="" />
+          <h3 class="vibify">Vibify</h3>
+        </div>
+
         <div>
-
-          <div class="">
-            <img src="./images/logo.png" alt="" srcset="" />
-            <h3>Vibify</h3>
-          </div>
-
-          <div>
-            <button >
-                Contact Us
-            </button>
-          </div>
+          <a href="SignUp.html"><button class="sign_up">Sign up</button></a>
         </div>
       </nav>
     </header>
+
+    <!-- //section part -->
+    <section class="sect1">
+      <!-- // left corner subsection -->
+      <div class="subcontainer1">
+        <img class="boy" src="/public/images/boy_holding_speaker.png" alt="" />
+        <div class="circle_container">
+          <div class="circle circle1"></div>
+          <div class="circle circle2"></div>
+          <div class="circle circle3"></div>
+          <div class="circle circle4"></div>
+          <div class="circle circle5"></div>
+        </div>
+      </div>
+   <!-- // right corner subsection -->
+      <div class="subcontainer2">
+        <h1 class="headline">
+          <span class="span1">Vibify-</span>
+          <span class="span2"
+            >Where music <br />
+            mirrors life.</span
+          >
+          That is Why <br />
+          our <span class="span3">HEARTS</span> Have
+          <span class="span3">BEATS</span>
+        </h1>
+        <p class="parag">your mood, your music, instantly with vibify</p>
+
+        <button class="cta">
+          <span>Join | Enjoy</span>
+          <svg viewBox="0 0 13 10" height="10px" width="15px">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
   </body>
 </html>
