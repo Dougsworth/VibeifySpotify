@@ -45,6 +45,16 @@ const moodBtn = [
 
 const moodBtnContainer = document.querySelector('.mood-btn-container');
 
+// function to get random color
+
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 // Style the mood-btn to be scattered randomly across the page
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -72,10 +82,14 @@ moodBtns.forEach((btn) => {
     moodBtns.forEach((btn) => {
         const randomX = Math.random() * (window.innerWidth - btn.clientWidth);
         const randomY = Math.random() * (maxTop - btn.clientHeight);
+        const randomColor = getRandomColor();
+
+        btn.style.backgroundColor = randomColor;
         btn.style.position = 'absolute';
         btn.style.left = randomX + 'px';
         btn.style.top = randomY + 'px';
         btn.style.transition = 'all 0.5s ease';
+        btn.style.zIndex = '1';
     })
 })
 

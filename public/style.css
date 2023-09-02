@@ -3,6 +3,7 @@
   --font-landing: "Poppins", sans-serif;
   --font-family: "Krona One", sans-serif;
   --font-dashboard: "Montserrat", sans-serif;
+  --text-color: #710202;
 }
 
 * {
@@ -44,8 +45,6 @@ nav {
   gap: 10px;
   align-items: center;
 }
-
-
 
 .vibify {
   font-size: 18px;
@@ -349,10 +348,9 @@ input:invalid {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #A8DADC;
+  background-color: #a8dadc;
   color: #224957;
   transition: 0.3s ease-in-out;
-
 }
 
 .button1:hover {
@@ -368,7 +366,7 @@ input:invalid {
   border: none;
   outline: none;
   transition: 0.3s ease-in-out;
-  background-color: #A8DADC;
+  background-color: #a8dadc;
   color: #224957;
   cursor: pointer;
 }
@@ -390,14 +388,12 @@ input:invalid {
   cursor: pointer;
   width: 20em;
   margin-left: 4rem;
-
 }
 
 .button3:hover {
   background-color: rgb(167, 16, 16);
   color: white;
 }
-
 
 /* Styling for playlist generation page */
 
@@ -410,13 +406,12 @@ input:invalid {
 }
 
 .logo-center img {
-  height: 13rem;
-  width: 13rem;
+  height: 10rem;
+  width: 10rem;
+  margin-top: 5rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  
 }
 
 .mood-btn-container {
@@ -429,22 +424,39 @@ input:invalid {
 }
 
 .mood-btn {
-  padding: 1rem 2rem;
+  padding: 0.7rem 1.7rem;
   border: none;
   border-radius: 15px;
-  background-color: #A8DADC;
-  color: #224957;
+  background-color: #a8dadc;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
+.mood-btn-container .mood-btn:nth-child(even) {
+  margin-top: 2rem;
+  background-color: #7B0751;
+  color: #fff;
+}
 
+.mood-btn:hover {
+  background-color: #224957;
+  color: white;
+}
 
+.playlist-generator h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--text-color);
 
-
-
+  font-family: var(--font-dashboard);
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+}
 
 /* //footer styling is here  */
 .footer {
@@ -456,5 +468,4 @@ input:invalid {
 .wave {
   height: 7.2rem;
   width: 100%;
-
 }
