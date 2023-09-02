@@ -1,5 +1,5 @@
 :root {
-  --landing-color: #e5e5e5;
+  --landing-color: #f1faee;
   --font-landing: "Poppins", sans-serif;
   --font-family: "Krona One", sans-serif;
   --font-dashboard: "Montserrat", sans-serif;
@@ -15,10 +15,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
-  min-width: 90%;
-  padding: 1.3rem;
+  max-height: 100vh;
+  font-family: var(--font-family);
   overflow: hidden;
   background-color: #f1faee;
 }
@@ -46,6 +44,8 @@ nav {
   gap: 10px;
   align-items: center;
 }
+
+
 
 .vibify {
   font-size: 18px;
@@ -397,11 +397,64 @@ input:invalid {
   background-color: rgb(167, 16, 16);
   color: white;
 }
+
+
+/* Styling for playlist generation page */
+
+.logo-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.logo-center img {
+  height: 13rem;
+  width: 13rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  
+}
+
+.mood-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.mood-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #A8DADC;
+  color: #224957;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
 /* //footer styling is here  */
 .footer {
-  min-width: 100%;
-  min-height: 6rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
 }
 .wave {
   height: 7.2rem;
+  width: 100%;
+
 }
