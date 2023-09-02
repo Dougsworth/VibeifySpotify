@@ -11,18 +11,19 @@
   box-sizing: border-box;
   font: inherit;
 }
+body,
 html {
-  scroll-behavior: smooth;
-}
-body {
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
-  min-width: 90%;
-  padding: 1.3rem;
-  overflow: hidden;
-  background-color: #f1faee;
+  height: 100%;
+  overflow: hidden; /* Prevents scrolling */
 }
 
+.sect1 {
+  height: 100vh; /* Makes the section cover the entire viewport height */
+}
+
+.subcontainer1 {
+  height: 100vh; /* Makes the subcontainer cover the entire viewport height */
+}
 .page2 {
   background-color: #f1faee;
   height: 100vh;
@@ -45,6 +46,8 @@ nav {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .vibify {
@@ -67,6 +70,8 @@ nav {
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   transition: all 250ms;
   overflow: hidden;
+  margin-right: 2rem;
+  margin-top: 1rem;
 }
 
 .sign_up::before {
@@ -106,8 +111,21 @@ nav {
   display: flex;
   flex-direction: row;
 }
-.boy {
+/* .boy {
   height: 30rem;
+} */
+.boy {
+  width: auto; /* Adjusts the width based on the height */
+  height: 100%; /* Makes the image cover the entire subcontainer height */
+  object-fit: cover; /* Ensures the image covers the container without distorting its aspect ratio */
+  object-position: center; /* Centers the image */
+  filter: blur(2px);
+}
+
+.boy:hover {
+  transform: scale(1.1);
+  filter: brightness(101%);
+  transition: transform 0.6s ease-in-out, filter 0.3s ease-in-out;
 }
 
 /* //second subcontainer */
@@ -237,7 +255,7 @@ nav {
   position: absolute;
   height: 3.4rem;
   width: 3.4rem;
-  left: 3rem;
+  left: 2rem;
   top: 8.5rem;
 }
 .circle5 {
@@ -256,6 +274,23 @@ nav {
   right: 0.1rem;
   bottom: 6rem;
   box-shadow: 0px 0px 10px 5px rgba(85, 82, 82, 0.3);
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  width: 50px;
+  height: 50px;
+  transform: scale(0);
+  pointer-events: none; /* Ensures the ripple doesn't interfere with other mouse events */
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 /* // sign up page styling  */
@@ -349,10 +384,9 @@ input:invalid {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #A8DADC;
+  background-color: #a8dadc;
   color: #224957;
   transition: 0.3s ease-in-out;
-
 }
 
 .button1:hover {
@@ -368,7 +402,7 @@ input:invalid {
   border: none;
   outline: none;
   transition: 0.3s ease-in-out;
-  background-color: #A8DADC;
+  background-color: #a8dadc;
   color: #224957;
   cursor: pointer;
 }
@@ -390,7 +424,6 @@ input:invalid {
   cursor: pointer;
   width: 20em;
   margin-left: 4rem;
-
 }
 
 .button3:hover {
@@ -404,4 +437,5 @@ input:invalid {
 }
 .wave {
   height: 7.2rem;
+  width: 100% !important;
 }
